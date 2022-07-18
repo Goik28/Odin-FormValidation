@@ -1,0 +1,41 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+}
+
+input,
+label {
+  margin-top: 5px;
+}
+
+label:first-child {
+  margin-top: 0px;
+}
+
+.buttonPlace {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonPlace > input {
+  width: 100px;
+  padding: 5px;
+  font-weight: 700;
+}
