@@ -5,24 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>FormValidation</title>
   </head>
   <body>
     <form action="get">
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        placeholder="valid@mail.com"
+      />
       <label for="country">Country</label>
-      <input type="text" name="country" id="country" />
+      <input
+        type="text"
+        name="country"
+        id="country"
+        required
+        pattern="[A-Z]{2}"
+        maxlength="2"
+        minlength="2"
+        placeholder="Two digits only: US"
+      />
       <label for="zipcode">Zip Code</label>
-      <input type="number" name="zipcode" id="zipcode" />
+      <input
+        type="text"
+        pattern="^\d{5}(?:[- ]?\d{4})?$"
+        name="zipcode"
+        id="zipcode"
+        required
+        placeholder="Pattern 12345 or 12345-1234"
+      />
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        minlength="8"
+        required
+        placeholder="Minimum 8 digits"
+      />
       <label for="confirmPassword">Confirm Password</label>
-      <input type="password" name="confirmPassword" id="confirmPassword" />
+      <input
+        type="password"
+        name="confirmPassword"
+        id="confirmPassword"
+        required
+      />
       <div class="buttonPlace">
-        <input type="submit" value="Send" />
-        <input type="reset" value="Clear" />
+        <input type="submit" value="Send" id="submitButton" />
+        <input type="reset" value="Clear" id="resetButton" />
       </div>
     </form>
   </body>

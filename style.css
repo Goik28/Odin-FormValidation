@@ -19,6 +19,10 @@ form {
   border: solid black 1px;
 }
 
+input {
+  border: solid gray 1px;
+}
+
 input,
 label {
   margin-top: 5px;
@@ -38,4 +42,12 @@ label:first-child {
   width: 100px;
   padding: 5px;
   font-weight: 700;
+}
+
+.invalid {
+  border-color: red;
+}
+
+form > input:valid {
+  border-color: green;
 }
